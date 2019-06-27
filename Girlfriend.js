@@ -14,27 +14,50 @@ let girlFriend = {
         girlFriend.mood = "Happy";
         currentMood = "Happy";
         girlFriend.thought = "This makes " + girlFriend.name + " happy!"
+        document.getElementById("thoughts").innerHTML = girlFriend.thought;
     },
     ignore() {
         if (girlFriend.mood == "Happy") {
             girlFriend.mood = "Neutral"
             girlFriend.thought = girlFriend.name + " feels ignored and is no longer happy!"
+            document.getElementById("thoughts").innerHTML = girlFriend.thought;
  
     
         }
         else if (girlFriend.mood == "Neutral") {
             girlFriend.mood = "Sad"
             girlFriend.thought = girlFriend.name + " feels sad! :("
+            document.getElementById("thoughts").innerHTML = girlFriend.thought;
         }
+    },
+    hello() {
+        girlFriend.thought = girlFriend.name + " says hello!"
+        document.getElementById("thoughts").innerHTML = girlFriend.thought;
     }
 }
-function Hug() {
-girlFriend.giveHug();
-console.log(girlFriend.thought);
-let gfthought = girlFriend.thought;
-return document.getElementById("thoughts").innerHTML = gfthought;
+function mood() {// Updates gf mood
+    document.getElementById("mood").innerHTML = girlFriend.mood;
 }
-Hug();
+mood();
+function myFunction(x) {
+
+    if  (x == "1") {
+        girlFriend.hello();
+        console.log(girlFriend.thought);
+        
+    }
+    else if  (x == "2") {
+        girlFriend.giveHug();
+        console.log(girlFriend.thought);
+        mood();
+    }
+    else if  (x == "3") {
+        girlFriend.ignore();
+        console.log(girlFriend.thought);
+        mood();
+    }
+
+}
 
 /*function setMood() {
     currentMood = girlFriend.mood;
@@ -83,4 +106,3 @@ switch (new Date().getDay()) {
       // code block
   } 
 */
-
