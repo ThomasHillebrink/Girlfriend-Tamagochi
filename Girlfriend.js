@@ -32,7 +32,7 @@ let girlFriend = {
         }
     },
     hello() {
-        girlFriend.thought = girlFriend.name + " says hello!"
+        girlFriend.thought = girlFriend.name + " says hello back!"
         document.getElementById("thoughts").innerHTML = girlFriend.thought;
     }
 }
