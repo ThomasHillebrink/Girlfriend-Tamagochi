@@ -5,10 +5,11 @@ let currentMood = ""
 let girlFriend = {
     name: "Thari",
     age: 26,
-    pronoun: "She",
+    pronoun: "she",
     mood: "Neutral",
     hunger: 50,
     hogwardsHouse: "Ravenclaw",
+    cute: true,
     thought: "",
     giveHug() {
         girlFriend.mood = "Happy";
@@ -35,11 +36,11 @@ let girlFriend = {
         document.getElementById("thoughts").innerHTML = girlFriend.thought;
     }
 }
-function mood() {// Updates gf mood
+function gfStatistics() {// function to update statistics in HTML. Call on any statistic change
     document.getElementById("mood").innerHTML = girlFriend.mood;
 }
-mood();
-function myFunction(x) {
+gfStatistics();
+function button(x) {// the function attaching methods to buttons on HTML page
 
     if  (x == "1") {
         girlFriend.hello();
@@ -49,60 +50,13 @@ function myFunction(x) {
     else if  (x == "2") {
         girlFriend.giveHug();
         console.log(girlFriend.thought);
-        mood();
+        gfStatistics();
     }
     else if  (x == "3") {
         girlFriend.ignore();
         console.log(girlFriend.thought);
-        mood();
+        gfStatistics();
     }
 
 }
 
-/*function setMood() {
-    currentMood = girlFriend.mood;
-    document.getElementById("mood").innerHTML = currentMood;
-}
-setMood()
-function myFunction(x) {
-    switch (myFunction(x)) {
-        case "Hello":
-            girlFriend.giveHug();
-            document.getElementById("thoughts").innerHTML = recentThought;
-            break;
-        case "Hug":
-            break;
-        case "Ignore":
-            
-    }
-    girlFriend.giveHug();
-    /* if (x == "hello") {
-    girlFriend.giveHug()
-    //
-    }
-    else if (x == "ignore") {
-    girlFriend.ignore()
-    //
-    }
-    
-    girlFriend.giveHug();
-    document.getElementById("thoughts").innerHTML = girlfriend.recentThought;
-    }
-    document.getElementById("thoughts").innerHTML = recentThought
-}
-console.log(currentMood);
-girlFriend.giveHug();
-myFunction("hug");
-console.log(currentMood);
-
-switch (new Date().getDay()) {
-    case x:
-      // code block
-      break;
-    case y:
-      // code block
-      break;
-    default:
-      // code block
-  } 
-*/
