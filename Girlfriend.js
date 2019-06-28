@@ -4,6 +4,7 @@ let girlFriend = {
     pronoun: "she",
     mood: "Neutral",
     moodRating: 50,
+    outfit: ["blue shorts","black bra", "white undies", "yellow t-shirt", "white socks", "black shoes" ],
     hungery: false,
     hungerRating: 50,
     hogwardsHouse: "Ravenclaw",
