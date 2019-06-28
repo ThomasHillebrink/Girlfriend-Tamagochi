@@ -1,33 +1,30 @@
-/* let recentThought = "nothing"
-let currentMood = ""
-*/
-
 let girlFriend = {
     name: "Thari",
-    age: 26,
+    age: 27,
     pronoun: "she",
     mood: "Neutral",
-    hunger: 50,
+    moodRating: 50,
+    hungery: false,
+    hungerRating: 50,
     hogwardsHouse: "Ravenclaw",
     cute: true,
     thought: "",
     giveHug() {
         girlFriend.mood = "Happy";
-        currentMood = "Happy";
         girlFriend.thought = "This makes " + girlFriend.name + " happy!"
         document.getElementById("thoughts").innerHTML = girlFriend.thought;
     },
     ignore() {
         if (girlFriend.mood == "Happy") {
             girlFriend.mood = "Neutral"
-            girlFriend.thought = girlFriend.name + " feels ignored and is no longer happy!"
+            girlFriend.thought = girlFriend.name + " feels ignored!"
             document.getElementById("thoughts").innerHTML = girlFriend.thought;
  
     
         }
         else if (girlFriend.mood == "Neutral") {
             girlFriend.mood = "Sad"
-            girlFriend.thought = girlFriend.name + " feels sad! :("
+            girlFriend.thought = girlFriend.name + " feels ignored and sad! :("
             document.getElementById("thoughts").innerHTML = girlFriend.thought;
         }
     },
